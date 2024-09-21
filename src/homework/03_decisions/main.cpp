@@ -23,21 +23,36 @@ int main()
 
 	if (menu_option == 1) // Calculate letter grade using if
 	{
+		cout<<"--------------------------\n";
 		cout<<"Using if\n";
 		cout<<"Please input your grade (from 0 to 100)\n:";
+		cin>>grade;
+		cout<<"--------------------------\n";
+		cout<<"Your grade is :"<<get_letter_grade_using_if(grade)<<"\n";
+		cout<<"Thank you.\n";
+		cout<<"--------------------------\n:";
 	}
 	else if (menu_option == 2) // Calculate letter grade using switch
 	{
+		cout<<"--------------------------\n";
 		cout<<"Using switch\n";
 		cout<<"Please input your grade (from 0 to 100)\n:";
+		cin>>grade;
+		cout<<"--------------------------\n";
+		cout<<"Your grade is :"<<get_letter_grade_using_switch(grade)<<"\n";
+		cout<<"Thank you.\n";
+		cout<<"--------------------------\n:";
 	}
 	else if (menu_option == 3) //Exit
 	{
+		cout<<"--------------------------\n:";
 		cout<<"Closing Program\n";
+		
 	}
 	else
 	{
-		cout <<"Invalid input, closing program anyways\n";
+		cout<<"--------------------------\n:";
+		cout <<"Invalid input, closing program anyways.\n";
 	}
 	return 0;
 }

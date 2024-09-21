@@ -15,8 +15,8 @@ TEST_CASE("Verify get_letter_grade_using_if ")
 	REQUIRE(get_letter_grade_using_if(65) == "D");
 	REQUIRE(get_letter_grade_using_if(50) == "F");
 	// Testing outrageous num inputs
-	REQUIRE(get_letter_grade_using_if(5300) == "Invalid Input");
-	REQUIRE(get_letter_grade_using_if(-10) == "Invalid Input");
+	REQUIRE(get_letter_grade_using_if(5300) == "Invalid Input, please enter a number between 0 and 100 next time.");
+	REQUIRE(get_letter_grade_using_if(-10) == "Invalid Input, please enter a number between 0 and 100 next time.");
 	
 }
 
@@ -29,7 +29,7 @@ TEST_CASE("Verify get_letter_grade_using_switch")
 	REQUIRE(get_letter_grade_using_switch(65) == "D");
 	REQUIRE(get_letter_grade_using_switch(50) == "F");
 	// Testing outrageous num inputs
-	REQUIRE(get_letter_grade_using_if(5300) == "Invalid Input");
-	REQUIRE(get_letter_grade_using_if(-10) == "Invalid Input");
+	REQUIRE(get_letter_grade_using_if(5300) == "Invalid Input, please enter a number between 0 and 100 next time.");
+	REQUIRE(get_letter_grade_using_if(-10) == "Invalid Input, please enter a number between 0 and 100 next time.");
 
 }

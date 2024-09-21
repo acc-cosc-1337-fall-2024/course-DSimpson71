@@ -33,7 +33,7 @@ string get_letter_grade_using_if(int num)
     }
     else
     {
-        return "Invalid Input";
+        return "Invalid Input, please enter a number between 0 and 100 next time.";
     }
 
 }
@@ -71,7 +71,7 @@ string get_letter_grade_using_switch(int num)
         break;
     
     default:
-        option = "Invalid Input";
+        option = "Invalid Input, please enter a number between 0 and 100 next time.";
         break;
 
     return option;
