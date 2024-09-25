@@ -74,6 +74,7 @@ string get_letter_grade_using_switch(int num)
         option = "Invalid Input, please enter a number between 0 and 100 next time.";
         break;
 
-    return option;
+    
     }
+    return option;
 }
