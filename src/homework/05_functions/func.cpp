@@ -40,7 +40,7 @@ string reverse_string(string dna)
     string new_string = "";
     int dna_size = dna.size(); //Passing the value to a variable to get rid of error message and make C++ happy
     
-    for(int i = 10; i >= 0; i--)
+    for(int i = (dna_size-1); i >= 0; i--)
     {
         new_string +=dna[i];
     }
