@@ -8,12 +8,27 @@ using std::cout; using std::cin;
 
 void main_menu()
 {
+  
     cout<<"Please enter a number. \n";
     cout<<"1. Get GC Content\n";
     cout<<"2. Get DNA Complement\n";
     cout<<"3. Exit \n";
+    
+    
 }
 
+void handle_options()
+{   
+     string dna;
+     int option = 0;
+     cin>> option;
+     if(option == 1)
+    {
+	    cout<<"Please enter a dna string\n";
+	    cin>>dna;
+	    get_gc_content(dna);
+    }
+}
 
 double get_gc_content(string dna)
 {
