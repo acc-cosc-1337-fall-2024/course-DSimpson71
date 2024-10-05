@@ -8,6 +8,7 @@ int main()
 {
 	auto option = 0;
 	auto confirm = 'a';
+	string test_str = "CATCATCG";
 	string dna;
 	do
 	{
@@ -21,7 +22,11 @@ int main()
 		}
 		else if(option == 2)
 		{//DNA Complement Function
-
+			//Testing Reverse string
+			//reverse_string(test_str);
+			cout<<"Please enter a dna string\n";
+			cin>>dna;
+			get_dna_complement(dna);
 		}
 		else if(option == 3)
 		{//Confirm player wants to exit

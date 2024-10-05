@@ -8,43 +8,69 @@ using std::cout; using std::cin;
 
 void main_menu()
 {
-  
     cout<<"Please enter a number. \n";
     cout<<"1. Get GC Content\n";
     cout<<"2. Get DNA Complement\n";
     cout<<"3. Exit \n";
-    
-    
-}
-
-void handle_options()
-{   
-     string dna;
-     int option = 0;
-     cin>> option;
-     if(option == 1)
-    {
-	    cout<<"Please enter a dna string\n";
-	    cin>>dna;
-	    get_gc_content(dna);
-    }
 }
 
 double get_gc_content(string dna)
 {
     auto gc_content= 0.0;
-    for(int i = 0; i < dna.size(); i++)
+    int dna_size = dna.size(); //Passing the value to a variable to get rid of error message and make C++ happy
+    
+    for(int i = 0; i < dna_size; i++)
     {
         
         if(dna[i]== 'G')
         {
-            gc_content += .125;
+            gc_content += (1.0/dna_size);
         }
         else if(dna[i] == 'C')
         {
-            gc_content += .125;
+            gc_content += (1.0/dna_size);
         } 
     }
-    cout<<gc_content<<"\n";
+    cout<<"GC content is "<<gc_content<<"\n";
     return gc_content;
+}
+
+string reverse_string(string dna)
+{
+    string new_string = "";
+    int dna_size = dna.size(); //Passing the value to a variable to get rid of error message and make C++ happy
+    
+    for(int i = 10; i >= 0; i--)
+    {
+        new_string +=dna[i];
+    }
+    return new_string;
+}
+
+string get_dna_complement(string dna)
+{ 
+    dna = reverse_string(dna);
+    int dna_size = dna.size(); //Passing the value to a variable to get rid of error message and make C++ happy
+    for(int i = 0; i < dna_size; i++)
+    {
+        
+        if(dna[i]== 'G')
+        {
+           dna[i] = 'C';
+        }
+        else if(dna[i] == 'C')
+        {
+            dna[i] = 'G';
+        } 
+        else if(dna[i] == 'A')
+        {
+            dna[i] = 'T';
+        } 
+        else if(dna[i] == 'T')
+        {
+            dna[i] = 'A';
+        } 
+    }
+    cout<<"Reverse complement is "<<dna<<"\n";
+    return dna;
 }

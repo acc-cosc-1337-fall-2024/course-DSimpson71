@@ -13,3 +13,17 @@ TEST_CASE("Verify Function get_gc_content works effectively")
 	REQUIRE(get_gc_content("CGCTATAG") == .50);
 }
 
+TEST_CASE("Verify Function reverse_string works effectively") 
+{
+	REQUIRE(reverse_string("AGCTATAG") == "GATATCGA");
+	REQUIRE(reverse_string("CGCTATAG") == "GATATCGC");
+}
+
+TEST_CASE("Verify Function get_dna_complement works effectively") 
+{
+	REQUIRE(get_dna_complement("AAAACCCGGT") == "ACCGGGTTTT");
+	REQUIRE(get_dna_complement("CCCGGAAAAT") == "ATTTTCCGGG");
+}
+
+
+

@@ -10,4 +10,3 @@ string get_dna_complement(string dna);
 string reverse_string(string dna);
 
 void main_menu();
-void handle_options();
