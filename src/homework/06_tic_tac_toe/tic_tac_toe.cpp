@@ -22,7 +22,7 @@ void TicTacToe::mark_board(int position)
 
 void TicTacToe::display_board() const
 {
-
+    
     for(long unsigned int i = 0;i < pegs.size();i+=3)
     {
         cout<<pegs[i]<<"|"<<pegs[i+1]<<"|"<<pegs[i+2]<<"\n";
