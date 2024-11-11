@@ -25,4 +25,8 @@ private:
 };
 
 
+//Free Functions
+void Make_X_or_O(std::string &player);
+
+
 #endif

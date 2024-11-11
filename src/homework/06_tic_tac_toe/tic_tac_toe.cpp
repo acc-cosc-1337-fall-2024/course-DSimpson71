@@ -64,3 +64,18 @@ bool TicTacToe::check_board_full()
     }
     return true;
 }
+
+
+
+// Free Functions
+
+//Normalize Input
+
+void Make_X_or_O(std::string &player)
+{
+    if(player != "O")
+		{
+			player ="X";
+		} 
+    cout<<"Player one is "<<player<<".\n";
+}

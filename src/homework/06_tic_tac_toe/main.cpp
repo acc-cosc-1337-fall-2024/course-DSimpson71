@@ -11,8 +11,11 @@ int main()
 	char option= 'y';
 
 	do {
-		cout<<"Enter first player\n";
+		cout<<"Enter first player (Only X or Y)\n"; //Added functionality to correct input if invalid
 		cin>>player_one;
+		Make_X_or_O(player_one);
+		
+		
 
 		game.start_game(player_one);
 		int position;
