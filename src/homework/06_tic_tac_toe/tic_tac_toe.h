@@ -14,7 +14,7 @@ public:
     void mark_board(int position);
     std::string get_player() const{return player;};
     void display_board() const;
-    std::string get_winner();
+    std::string get_winner() {return winner;};
     
 
 private:
@@ -28,7 +28,7 @@ private:
     bool check_row_win();
     bool check_column_win();
     bool check_diagonal_win();
-    void set_winner();
+    void set_winner(){if(player== "X"){winner= "O";} else{winner= "X";}};
 };
 
 

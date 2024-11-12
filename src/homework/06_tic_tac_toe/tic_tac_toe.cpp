@@ -7,10 +7,17 @@ using std::cout;
 
 bool TicTacToe::game_over()  
 {
-    if(check_row_win());
-    check_column_win();
-    check_diagonal_win();
-    return check_board_full();
+    if(check_row_win() || check_column_win() || check_diagonal_win())
+    {
+        set_winner();
+        std::cout<<"Gaaaaamme Oooover, "<<get_winner()<<" has won\n";
+        return true;
+    }
+    else
+    {
+        return check_board_full();
+    }
+
 }
 
 void TicTacToe::start_game(std::string player_one)
@@ -35,13 +42,6 @@ void TicTacToe::display_board() const
     }
     
 }
-
-std::string TicTacToe::get_winner()
-{
-    //cout<<""<<winner<<"\n";
-    return winner;
-}
-
 
 
 //Private Functions 
@@ -183,14 +183,6 @@ bool TicTacToe::check_diagonal_win()
         return false;
 
 }
-void TicTacToe::set_winner()
-{
-    if(player== "X")
-        {winner= "O";}
-    else
-        {winner= "X";}
-}
-
 // Free Functions
 
 
