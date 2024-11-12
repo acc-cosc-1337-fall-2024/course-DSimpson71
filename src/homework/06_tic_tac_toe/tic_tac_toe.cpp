@@ -15,7 +15,7 @@ bool TicTacToe::game_over()
     }
     else
     {
-        
+        set_winner();
         return check_board_full();
     }
 
@@ -184,15 +184,29 @@ bool TicTacToe::check_diagonal_win()
         return false;
 
 }
-// Free Functions
 
 
-
-void Make_X_or_O(std::string &player) //Normalize Input: if X or O wasnt put in, Defaults to X
+void TicTacToe::set_winner()
 {
-    if(player != "O")
-		{
-			player ="X";
-		} 
-    cout<<"Player one is "<<player<<".\n";
+    if(!check_board_full())
+    {
+        if(player=="X")
+        {
+            winner="O";
+        }
+        else if(player=="O")
+        {
+            winner="X";
+        }
+    }
+    
+    else if(check_board_full())
+    {
+        if(!check_row_win() || !check_column_win() || !check_diagonal_win())
+        {
+            winner="C";
+        }
+    }
 }
+
+// Free Functions

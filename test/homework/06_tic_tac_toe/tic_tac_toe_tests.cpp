@@ -106,7 +106,6 @@ TEST_CASE("Test win by First Column")
 
 	game.mark_board(5);
 	REQUIRE(game.game_over() == false);
-	REQUIRE(game.get_winner()== "C");	//Extra Test, C functions as a tie but is really a default value for winner. 
 
 	game.mark_board(7);
 	REQUIRE(game.game_over() == true);

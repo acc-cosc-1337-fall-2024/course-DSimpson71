@@ -1,4 +1,5 @@
 #include "tic_tac_toe.h"
+#include "tic_tac_toe_manager.h"
 #include <iostream>
 
 using std::cout; using std::cin; using std::string;
@@ -6,6 +7,7 @@ using std::cout; using std::cin; using std::string;
 int main() 
 {
 	TicTacToe game;
+	TicTacToeManager manager;
 	string player_one;
 
 	char option= 'y';
@@ -13,7 +15,6 @@ int main()
 	do {
 		cout<<"Enter first player (Only X or O)\n"; 
 		cin>>player_one;
-		Make_X_or_O(player_one);  //Added functionality to correct input if invalid
 		
 
 		game.start_game(player_one);
@@ -26,7 +27,7 @@ int main()
 			game.display_board();
 		}
 		
-
+		manager.save_game(game);
 		cout<<"Do you want to play another game?\nEnter 'y' for yes, anything else will close the game. \n";
 		cin>> option;
 

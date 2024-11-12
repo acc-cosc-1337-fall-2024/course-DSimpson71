@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include "tic_tac_toe_manager.h"
 #ifndef tic_tac_toe_h
 #define tic_tac_toe_h
 
@@ -28,12 +29,16 @@ private:
     bool check_row_win();
     bool check_column_win();
     bool check_diagonal_win();
-    void set_winner(){if(player== "X"){winner= "O";} else{winner= "X";}};
+    //void set_winner(){if(player== "X"){winner= "O";} else{winner= "X";}}; <<< old code
+    void set_winner();
+
+
+    
 };
 
 
 //Free Functions
-void Make_X_or_O(std::string &player); //Normalize Input 
+
 
 
 #endif
