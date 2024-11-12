@@ -27,7 +27,7 @@ int main()
 		}
 		
 
-		cout<<"Do you want to play another game?\nEnter Y for yes or anything else for no\n";
+		cout<<"Do you want to play another game?\nEnter Y for yes, anything else will close the game. \n";
 		cin>> option;
 
 	}while(option == 'y' || option == 'Y');
