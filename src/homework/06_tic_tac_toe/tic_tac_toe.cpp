@@ -9,12 +9,13 @@ bool TicTacToe::game_over()
 {
     if(check_row_win() || check_column_win() || check_diagonal_win())
     {
-        set_winner();
+        set_winner();  
         std::cout<<"Gaaaaamme Oooover, "<<get_winner()<<" has won\n";
         return true;
     }
     else
     {
+        
         return check_board_full();
     }
 

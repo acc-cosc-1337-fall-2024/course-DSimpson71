@@ -19,7 +19,7 @@ public:
 
 private:
     std::string player;
-    std::string winner;
+    std::string winner = "C";
     std::vector<std::string> pegs {9, " "};
     void clear_board(); // Might be public, lets see
     void set_next_player();
