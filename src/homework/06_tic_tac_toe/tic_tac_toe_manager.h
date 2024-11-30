@@ -12,14 +12,14 @@ class TicTacToeManager
     //friend 
     public:
     void save_game(TicTacToe s);
-    void get_winner_totals(int& Xwins, int& Owins, int& ties);
+    void get_winner_totals(int& x, int& o, int& t);
 
 
     private:
     int ties = 0;
     int Xwins = 0;
     int Owins = 0;
-    //std::vector <TicTacToe> games;
+    std::vector <TicTacToe> games;
 
     void update_winner_count(std::string winner);
     
