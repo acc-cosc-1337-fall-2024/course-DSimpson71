@@ -7,6 +7,10 @@
 
 using std::cout; using std::cin; using std::string; using std::vector;
 
+
+
+//Public
+
 void TicTacToeManager::update_winner_count(std::string winner)
 {
     // TicTacToe game;
@@ -25,10 +29,10 @@ void TicTacToeManager::update_winner_count(std::string winner)
     }
 }
 
-void TicTacToeManager::save_game(TicTacToe s) //add the TicTacToe to games vector with push_back
+void TicTacToeManager::save_game(unique_ptr<TicTacToe> s) //add the TicTacToe to games vector with push_back
 {
-    update_winner_count(s.get_winner());
-    games.push_back(s);
+    update_winner_count(s->get_winner());
+    games.push_back(std::move(s));
     get_winner_totals(Xwins,Owins,ties);
     
 
@@ -42,3 +46,18 @@ void TicTacToeManager::get_winner_totals(int& x, int& o, int& t)
     std::cout<<"Owins= "<<Owins<<", ";
     std::cout<<"Ties= "<<ties<<"\n";
 }
+
+void TicTacToeManager::display_all_games()
+{
+    for (auto& game : games) {
+        game->display_board();
+    }
+}
+
+// int TicTacToeManager::read_and_verify_game_type(int gametype)
+// {
+//     if((gametype!=3) && (gametype!=4)
+//     {
+        
+//     }
+// }

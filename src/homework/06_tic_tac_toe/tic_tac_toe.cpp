@@ -82,105 +82,105 @@ bool TicTacToe::check_board_full()
 
 bool TicTacToe::check_row_win() //This function should be called but isnt being called
 {
-    if((pegs[0] == "X") && (pegs[1] == "X") && (pegs[2] == "X")) // Check rows for X wins
-    {
+    // if((pegs[0] == "X") && (pegs[1] == "X") && (pegs[2] == "X")) // Check rows for X wins
+    // {
         
-        return true;
-    }
-    else if((pegs[3] == "X") && (pegs[4] == "X") && (pegs[5] == "X"))
-    {
+    //     return true;
+    // }
+    // else if((pegs[3] == "X") && (pegs[4] == "X") && (pegs[5] == "X"))
+    // {
        
-        return true;
-    }
-    else if((pegs[6] == "X") && (pegs[7] == "X") && (pegs[8] == "X"))
-    {
+    //     return true;
+    // }
+    // else if((pegs[6] == "X") && (pegs[7] == "X") && (pegs[8] == "X"))
+    // {
         
-        return true;
-    }
+    //     return true;
+    // }
     
-    else if((pegs[0] == "O") && (pegs[1] == "O") && (pegs[2] == "O")) // Check rows for O wins
-    {
+    // else if((pegs[0] == "O") && (pegs[1] == "O") && (pegs[2] == "O")) // Check rows for O wins
+    // {
         
-        return true;
-    }
-    else if((pegs[3] == "O") && (pegs[4] == "O") && (pegs[5] == "O"))
-    {
+    //     return true;
+    // }
+    // else if((pegs[3] == "O") && (pegs[4] == "O") && (pegs[5] == "O"))
+    // {
        
-        return true;
-    }
-    else if((pegs[6] == "O") && (pegs[7] == "O") && (pegs[8] == "O"))
-    {
+    //     return true;
+    // }
+    // else if((pegs[6] == "O") && (pegs[7] == "O") && (pegs[8] == "O"))
+    // {
     
-        return true;
-    }
-    //If all these are not true then return false for a row win
-    else
+    //     return true;
+    // }
+    // //If all these are not true then return false for a row win
+    // else
         return false;
 }
 bool TicTacToe::check_column_win()
 {
-    if((pegs[0] == "X") && (pegs[3] == "X") && (pegs[6] == "X")) // Check Column for X wins
-    {
-        // cout<<"First Column X win \n";
-        return true;
-    }
-    else if((pegs[1] == "X") && (pegs[4] == "X") && (pegs[7] == "X"))
-    {
+    // if((pegs[0] == "X") && (pegs[3] == "X") && (pegs[6] == "X")) // Check Column for X wins
+    // {
+    //     // cout<<"First Column X win \n";
+    //     return true;
+    // }
+    // else if((pegs[1] == "X") && (pegs[4] == "X") && (pegs[7] == "X"))
+    // {
        
-        return true;
-    }
-    else if((pegs[2] == "X") && (pegs[5] == "X") && (pegs[8] == "X"))
-    {
+    //     return true;
+    // }
+    // else if((pegs[2] == "X") && (pegs[5] == "X") && (pegs[8] == "X"))
+    // {
         
-        return true;
-    }
+    //     return true;
+    // }
     
-    else if((pegs[0] == "O") && (pegs[3] == "O") && (pegs[6] == "O")) // Check columns for O wins
-    {
+    // else if((pegs[0] == "O") && (pegs[3] == "O") && (pegs[6] == "O")) // Check columns for O wins
+    // {
         
-        return true;
-    }
-    else if((pegs[1] == "O") && (pegs[4] == "O") && (pegs[7] == "O"))
-    {
+    //     return true;
+    // }
+    // else if((pegs[1] == "O") && (pegs[4] == "O") && (pegs[7] == "O"))
+    // {
         
-        return true;
-    }
-    else if((pegs[2] == "O") && (pegs[5] == "O") && (pegs[8] == "O"))
-    {
+    //     return true;
+    // }
+    // else if((pegs[2] == "O") && (pegs[5] == "O") && (pegs[8] == "O"))
+    // {
     
-        return true;
-    }
-    //If all these are not true then return false for a column win
-    else
+    //     return true;
+    // }
+    // //If all these are not true then return false for a column win
+    // else
         return false;
 }
 bool TicTacToe::check_diagonal_win()
 {
-    if((pegs[0] == "O") && (pegs[4] == "O") && (pegs[8] == "O"))  //Check for Diagonal O wins
-    {
+    // if((pegs[0] == "O") && (pegs[4] == "O") && (pegs[8] == "O"))  //Check for Diagonal O wins
+    // {
 
-        return true;
-    }
+    //     return true;
+    // }
 
-    else if((pegs[6] == "O") && (pegs[4] == "O") && (pegs[2] == "O"))
-    {
+    // else if((pegs[6] == "O") && (pegs[4] == "O") && (pegs[2] == "O"))
+    // {
         
-        return true;
-    }
+    //     return true;
+    // }
 
-    else if((pegs[0] == "X") && (pegs[4] == "X") && (pegs[8] == "X"))  //Check for Diagonal X wins
-    {
+    // else if((pegs[0] == "X") && (pegs[4] == "X") && (pegs[8] == "X"))  //Check for Diagonal X wins
+    // {
         
-        return true;
-    }
+    //     return true;
+    // }
 
-    else if((pegs[6] == "X") && (pegs[4] == "X") && (pegs[2] == "X"))
-    {
+    // else if((pegs[6] == "X") && (pegs[4] == "X") && (pegs[2] == "X"))
+    // {
         
-        return true;
-    }
+    //     return true;
+    // }
 
-    else 
+    // else 
         return false;
 
 }
